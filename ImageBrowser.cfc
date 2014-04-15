@@ -6,7 +6,7 @@ component name="ImageBrowser"
 		returnformat="JSON"
 	{
 		var length = 0;
-		var path = image = folder = "";
+		var path = var image = var folder = "";
 		var result = [];
 
 		arrayEach(
