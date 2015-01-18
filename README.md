@@ -14,7 +14,6 @@ Here's an example:
   
   <head>
     <title>ImageBrowser.cfc For CKEditor Image Browser Addon</title>
-    <base href="#basehref#">
     <script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
   </head>
 
