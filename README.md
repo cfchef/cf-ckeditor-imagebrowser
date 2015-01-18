@@ -8,24 +8,29 @@ This bundle includes a the ImageBrowser CFC for processing the JSON needed for t
 Here's an example:
 
 ```
-<html lang="en">
+<!DOCTYPE html>
 
-  <head>
-  	<script type="text/javascript" src="path/to/ckeditor/ckeditor.js"></script>
-  </head>
+<html lang="en">
   
+  <head>
+    <title>ImageBrowser.cfc For CKEditor Image Browser Addon</title>
+    <base href="#basehref#">
+    <script src="//cdn.ckeditor.com/4.4.6/standard/ckeditor.js"></script>
+  </head>
+
   <body>
-    <form style="width: 400px; margin: 20px auto;">
-    	<textarea id="pagecontent" name="pagecontent"></textarea>
+    <h2>CKEditor Image Browser Plugin With ColdFusion 10</h2>
+    <form style="width: 600px; margin: 20px auto;">
+      <textarea id="pagecontent" name="pagecontent"></textarea>
     </form>
     <script type="text/javascript">
-    	CKEDITOR.replace( 'pagecontent', {
-    		extraPlugins: "imagebrowser",
-    		imageBrowser_listUrl: "path/to/cfc/ImageBrowser.cfc?method=list&dir=path/to/images",
-    		toolbar : [ { name: 'insert', items : [ 'Image' ] } ]
-    	});
+      CKEDITOR.plugins.addExternal( 'imagebrowser', '/path/to/assets/js/ckeditor/plugins/imagebrowser/', 'plugin.js' );
+      CKEDITOR.replace( 'pagecontent', {
+            extraPlugins: "imagebrowser",
+            imageBrowser_listUrl: "path/to/ImageBrowser.cfc?method=list&dir=assets/images"
+      });
     </script>
   </body>
-  
+
 </html>
 ```
