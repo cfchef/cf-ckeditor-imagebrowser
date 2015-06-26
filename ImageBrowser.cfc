@@ -1,7 +1,7 @@
 component name="ImageBrowser"
 	output="false"
 {
-	remote array function list(required string dir = "")
+	remote array function list(required string dir)
 		output="false"
 		returnformat="JSON"
 	{
