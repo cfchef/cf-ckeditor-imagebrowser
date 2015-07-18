@@ -7,7 +7,7 @@ This bundle includes a the ImageBrowser CFC for processing the JSON needed for t
 
 Here's an example:
 
-```
+```html
 <!DOCTYPE html>
 
 <html lang="en">
